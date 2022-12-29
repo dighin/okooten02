@@ -9,7 +9,7 @@ import TopTracks from 'components/TopTracks';
 
 import { useState, useRef, useEffect } from 'react';
  
-export default function menu_hd_underground() {
+export default function Menu_hd_underground() {
 
   const [dark, setDark] = useState("다크모드");
 
