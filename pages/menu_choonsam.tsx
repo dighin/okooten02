@@ -6,7 +6,7 @@ import Unsplash from 'components/metrics/Unsplash';
 import YouTube from 'components/metrics/Youtube';
 import TopTracks from 'components/TopTracks';
 
-export default function menu_choonsam() {
+export default function Menu_choonsam() {
 
   const onclickHandler = (name) => alert(`hi ${name}`);
 
