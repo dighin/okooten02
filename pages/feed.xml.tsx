@@ -1,5 +1,5 @@
 import RSS from 'rss';
-import { sanityClient } from 'lib/sanity-server';
+
 import { indexQuery } from 'lib/queries';
 
 export async function getServerSideProps({ res }) {
@@ -9,15 +9,7 @@ export async function getServerSideProps({ res }) {
     feed_url: 'https://leerob.io/feed.xml'
   });
 
-  const allPosts = await sanityClient.fetch(indexQuery);
-  allPosts.map((post) => {
-    feed.item({
-      title: post.title,
-      url: `https://leerob.io/blog/${post.slug}`,
-      date: post.date,
-      description: post.excerpt
-    });
-  });
+ 
 
   res.setHeader('Content-Type', 'text/xml');
   res.setHeader(
