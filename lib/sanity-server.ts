@@ -12,7 +12,7 @@ export const previewClient = createClient({
   ...sanityConfig,
   useCdn: false,
   token: process.env.SANITY_API_TOKEN
-  ,projectId: 'okooten' 
+  
 });
 
 export const getClient = (preview) => (preview ? previewClient : sanityClient);
